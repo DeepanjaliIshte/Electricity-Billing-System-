@@ -65,7 +65,23 @@ Navigates back to the login screen.</h6>
 <h4>Main Method</h4>
 <h6>Creates an instance of the Signup class to display the signup form.</h6>
 
-<h2>Project class</h2>
+<h2>--------Conn class--------</h2>
+<h6>The Conn class is a utility class for establishing a connection to a MySQL database and creating a Statement object to execute SQL queries.</h6>
+
+Key Components
+<h4>Instance Variables</h4>
+<h6>Connection c: Stores the connection to the database.<br>
+Statement s: Used to execute SQL statements.</h6>
+
+<h4>Constructor (Conn)</h4>
+<h6>Establishes a connection to the MySQL database using DriverManager.getConnection with the provided URL, username, and password.<br>
+Initializes the Statement object s using the connection c.</h6>
+  
+<h4>Exception Handling</h4>
+<h6>The constructor throws SQLException, which must be handled by any class that instantiates Conn.</h6>
+
+
+<h2>--------Project class--------</h2>
 <h6>The Project class is the main GUI window for an application, designed to handle different user roles (Admin and Customer) and provide various functionalities through a menu bar. The class extends JFrame and implements ActionListener to handle user interactions.</h6>
 
 <h4>Constructor (Project)</h4>

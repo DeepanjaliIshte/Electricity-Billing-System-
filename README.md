@@ -135,7 +135,7 @@ Makes the JFrame visible.</h6>
 <h6>Creates an instance of CustomerDetails, triggering the GUI to display.</h6>
 
 <h2>--------CalucalteBill Class--------</h2>
-The CalculateBill class is a GUI application for calculating and managing electricity bills. It extends JFrame and implements the ActionListener interface to handle user interactions.
+<h6>The CalculateBill class is a GUI application for calculating and managing electricity bills. It extends JFrame and implements the ActionListener interface to handle user interactions.</h6>
 
 Key Components
 <h4>Instance Variables</h4>

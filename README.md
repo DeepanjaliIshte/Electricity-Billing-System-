@@ -189,33 +189,30 @@ Database Query:<h6> Establishes a connection to the database using the Conn clas
 <h6>The MeterInfo class is a Swing-based GUI for inputting and submitting meter information. </h6>
 
 Key Components
-Class Declaration and Constructor:
+<h4>Class Declaration and Constructor:</h4>
+<h5>MeterInfo(String meternumber):</h5> <h6>The constructor initializes the frame and sets up the GUI components.</h6>
+<h5>Frame Properties:</h5> <h6>Sets the size (700x500 pixels) and location (400, 200) of the window.</h6>
+<h5>Panel (JPanel p):</h5><h6> Uses a JPanel with a null layout manager to position components manually and sets its background color.</h6>
 
-MeterInfo(String meternumber): The constructor initializes the frame and sets up the GUI components.
-Frame Properties: Sets the size (700x500 pixels) and location (400, 200) of the window.
-Panel (JPanel p): Uses a JPanel with a null layout manager to position components manually and sets its background color.
-GUI Components:
+<h4>GUI Components:</h4>
+<h5>Labels (JLabel):</h5> <h6>Display static text and meter information.</h6>
+<h5>Text Fields (JTextField): <h6>Used for entering various meter details. (Though JTextField instances are defined, they are not used in the current code.)</h6>
+<h5>Choice (Choice):</h5><h6> Dropdown menus for selecting meter location, type, phase code, and bill type.</h6>
+<h5>Buttons (JButton):</h5><h6> A "Submit" button that triggers the action event.</h6>
 
-Labels (JLabel): Display static text and meter information.
-Text Fields (JTextField): Used for entering various meter details. (Though JTextField instances are defined, they are not used in the current code.)
-Choice (Choice): Dropdown menus for selecting meter location, type, phase code, and bill type.
-Buttons (JButton): A "Submit" button that triggers the action event.
-Layout and Appearance:
+<h4>Layout and Appearance:</h4>
+<h5>Heading:</h5><h6> A JLabel displaying "Meter Information" at the top of the panel.<br>
+<h5>Image:</h5><h6> An ImageIcon added to the left side of the frame for visual enhancement.<br>
+<h5>Background:</h5> <h6>Sets the background color of the content pane to white.</h6>
 
-Heading: A JLabel displaying "Meter Information" at the top of the panel.
-Image: An ImageIcon added to the left side of the frame for visual enhancement.
-Background: Sets the background color of the content pane to white.
-Action Handling:
+<h4>Action Handling:</h4>
+<h5>actionPerformed(ActionEvent ae):</h5><h6> Handles the "Submit" button click:
+Retrieves values from the Choice components and constructs an SQL query to insert the data into the meter_info table.<br>
+Uses a Conn class to execute the SQL update query.<br>
+Displays a success message and hides the window upon successful submission.<br>
+Catches and prints any exceptions that occur during database operations.</h6>
 
-actionPerformed(ActionEvent ae): 
-Handles the "Submit" button click:
-Retrieves values from the Choice components and constructs an SQL query to insert the data into the meter_info table.
-Uses a Conn class to execute the SQL update query.
-Displays a success message and hides the window upon successful submission.
-Catches and prints any exceptions that occur during database operations.
-
-Main Method:
-
+<h4>Main Method:</h4>
 <h6>main(String[] args): Creates an instance of MeterInfo with an empty string for the meter number, which will not display actual data unless a valid meter number is provided.</h6>
 
 <h2>--------ViewCustomer Class--------</h2>

@@ -110,3 +110,26 @@ Hides the current window and opens the login window for "Exit".<br>
 Opens specific user-related windows like PayBill and GenerateBill using the meter number.<br></h6>
 <h4>Main Method</4>
 <h6>Initializes the Project class with empty strings for atype and meter.</h6>
+
+<h2>--------CustomerDetails class--------</h2>
+<h6>The CustomerDetails class is a GUI application built using Java Swing to display and print customer details from a database. It extends JFrame and implements the ActionListener interface.</h6>
+Key Components
+<h4>Instance Variables</h4>
+<h6>Choice meternumber, cmonth: (not used in the current implementation but likely intended for filtering).
+JTable table: Displays customer details in a table format.<br>
+JButton search, print: Buttons for search and print actions (only print is used in the current implementation).</h6>
+
+<h4>Constructor (CustomerDetails)</h4>
+<h6>Sets up the JFrame properties: title, size, and location.<br>
+Initializes the JTable to display customer details.<br>
+Connects to the database using the Conn class and executes a SQL query to retrieve customer details.<br>
+Uses DbUtils.resultSetToTableModel to populate the JTable with the query results.<br>
+Adds the table to a JScrollPane and adds it to the JFrame.<br>
+Adds a "Print" button and sets up its action listener.<br>
+Makes the JFrame visible.</h6>
+
+<h4>Action Listener (actionPerformed)</h4>
+<h6>Handles the print action for the table. When the "Print" button is clicked, it prints the contents of the table.</h6>
+
+<h4>Main Method</h4>
+<h6>Creates an instance of CustomerDetails, triggering the GUI to display.</h6>

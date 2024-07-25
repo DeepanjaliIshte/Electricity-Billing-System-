@@ -65,3 +65,32 @@ Navigates back to the login screen.</h6>
 <h4>Main Method</h4>
 <h6>Creates an instance of the Signup class to display the signup form.</h6>
 
+<h2>Project class</h2>
+<h6>The Project class is the main GUI window for an application, designed to handle different user roles (Admin and Customer) and provide various functionalities through a menu bar. The class extends JFrame and implements ActionListener to handle user interactions.</h6>
+
+<h4>Constructor (Project)</h4>
+<h5>Initialization</h5>
+<h6>Assigns the atype and meter variables.<br>
+Maximizes the window using setExtendedState(JFrame.MAXIMIZED_BOTH).</h6>h6>
+<h5>Background Image</h5>
+<h6>Loads an image (elect1.jpg) and scales it to fit the frame.
+Adds the image to a JLabel and then adds the label to the frame.</h6>
+<h5>Menu Bar</h5>
+<h6>Creates a JMenuBar and sets it as the frame's menu bar.<br>
+Adds menus and menu items with icons, mnemonics, accelerators, and action listeners.<br>
+Menus are customized based on the account type:<br>
+Admin: Access to "Master" menu.<br>
+Customer: Access to "Information", "User", and "Report" menus.<br>
+Adds common menus like "Utility" and "Exit" for all users.</h6>
+<h5>Layout and Visibility</h5>
+<h6>Sets the layout to FlowLayout.<br>
+Makes the frame visible.</h6>
+
+<h4>Action Listener Method (actionPerformed)</h4>
+<h6>Responds to menu item selections by performing specific actions:<br>
+Opens different windows (e.g., NewCustomer, DepositDetails).<br>
+Executes system commands for Notepad and Calculator.<br>
+Hides the current window and opens the login window for "Exit".<br>
+Opens specific user-related windows like PayBill and GenerateBill using the meter number.<br></h6>h6>
+<h4>Main Method</4>
+<h6>Initializes the Project class with empty strings for atype and meter.</h6>

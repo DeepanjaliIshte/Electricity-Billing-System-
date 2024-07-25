@@ -56,7 +56,7 @@ Sets the visibility of the frame.</h6>
 <h4>Event Handling (actionPerformed method)</h4>
 <h6>Handles the click events for the create and back buttons.</h6>
 <h5>Create Button:</h5>
-<h6</h6>Retrieves user inputs and constructs an SQL query to insert or update the database based on the account type.<br>
+<h6>Retrieves user inputs and constructs an SQL query to insert or update the database based on the account type.<br>
 Executes the SQL query and displays a success message.<br>
 Navigates back to the login screen.</h6>
 <h5>Back Button:</h5>
@@ -91,6 +91,6 @@ Makes the frame visible.</h6>
 Opens different windows (e.g., NewCustomer, DepositDetails).<br>
 Executes system commands for Notepad and Calculator.<br>
 Hides the current window and opens the login window for "Exit".<br>
-Opens specific user-related windows like PayBill and GenerateBill using the meter number.<br></h6>h6>
+Opens specific user-related windows like PayBill and GenerateBill using the meter number.<br></h6>
 <h4>Main Method</4>
 <h6>Initializes the Project class with empty strings for atype and meter.</h6>

@@ -216,6 +216,42 @@ Catches and prints any exceptions that occur during database operations.</h6>
 <h6>main(String[] args): Creates an instance of MeterInfo with an empty string for the meter number, which will not display actual data unless a valid meter number is provided.</h6>
 
 <h2>--------ViewCustomer Class--------</h2>
+<h6>The ViewInformation class creates a Swing-based GUI application to display customer details based on a given meter number.</h6>
+
+Components:
+<h4>Frame and Layout:</h4>
+<h6>Extends JFrame and sets layout to null for manual positioning of components.</h6>
+<h4>UI Elements<h6>:
+<h6>Heading: Displays the title "VIEW CUSTOMER INFORMATION".<br>
+Labels: For displaying customer information such as Name, Meter Number, Address, City, State, Email, and Phone.<br>
+Cancel Button: Closes the frame when clicked.</h6>
+  
+<h4>Database Interaction:</h4>
+<h6>Retrieves customer details from a database using the meter number provided.<br>
+Uses a PreparedStatement to prevent SQL injection and safely query the database.<h6>
+
+<h4>Image:</h4>
+<h6>Displays an image on the frame, scaled to fit the given dimensions.</h6>
+
+<h4>Functionality:</h4>
+
+<h6>Constructor: Initializes the GUI, sets component positions, fetches customer information from the database, and adds an image.<br>
+loadCustomerInformation Method: Queries the database and populates the labels with customer details.<br>
+actionPerformed Method: Hides the frame when the "Cancel" button is clicked.</h6>
+
+<h5>Key Points:</h5>
+
+<h6>Database Security: Uses PreparedStatement for secure database queries.<br>
+Resource Management: Uses try-with-resources to handle database connections and statements.<br>
+UI Design: Manually positions components for a custom layout and includes an image for visual enhancement.br></h6>
+<h5>Code Flow</h5>
+<h6>Initialization: Sets frame size, layout, and background color.<br>
+UI Setup: Adds labels for customer details and sets their positions.<br>
+Database Query: Fetches and displays customer data based on the meter number.<br>
+Button Handling: Sets up the "Cancel" button to close the frame.<br>
+Image Handling: Adds a scaled image to the frame.<br>
+This class provides a basic interface for viewing customer details and integrates with a database to fetch and display relevant information.</h6>
+
 <h2>--------UpdateCustomer Class--------</h2>
 <h2>--------PayBill Class--------</h2>
 <h2>--------Paytm Class--------</h2>

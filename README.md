@@ -51,20 +51,21 @@ Adds labels and text fields for username, meter number, name, and password.<br>
 Adds focus and item listeners to handle specific interactions.<br>
 Adds buttons for creating an account and going back.<br>
 Adds an image to the panel for visual enhancement.<br>
-Sets the visibility of the frame.
+Sets the visibility of the frame.</h6>
+
 <h4>Event Handling (actionPerformed method)</h4>
-Handles the click events for the create and back buttons.
+<h6>Handles the click events for the create and back buttons.</h6>
 <h5>Create Button:</h5>
-Retrieves user inputs and constructs an SQL query to insert or update the database based on the account type.<br>
+<h6</h6>Retrieves user inputs and constructs an SQL query to insert or update the database based on the account type.<br>
 Executes the SQL query and displays a success message.<br>
-Navigates back to the login screen.
+Navigates back to the login screen.</h6>
 <h5>Back Button:</h5>
-Navigates back to the login screen without making any changes.
+<h6>Navigates back to the login screen without making any changes.</h6>
 
 <h4>Main Method</h4>
-Creates an instance of the Signup class to display the signup form.
-Detailed Explanation
+<h6>Creates an instance of the Signup class to display the signup form.</h6>
 
+/*Detailed Explanation 
 <h4>Constructor</h4>
 
 Sets up the main frame with size, background color, and layout. <br>
@@ -82,4 +83,4 @@ Displays a message indicating successful account creation and navigates back to 
 For the back button, it simply navigates back to the login screen.<br>
 
 <h4>Main Method</h4>
-The main method initializes the signup form by creating an instance of the Signup class.</h6>
+The main method initializes the signup form by creating an instance of the Signup class.</h6> */

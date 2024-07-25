@@ -15,22 +15,21 @@ The animation and timing are handled using a loop and a separate thread.<br>
 
 Key Components :
 <h4>Instance Variables: </h4>
-         <h5> JButton for login, cancel, and signup actions.<br>
-          JTextField for username and password inputs.<br>
-          Choice for selecting the user type (Admin or Customer).<br><h5>
-
+  <h5> JButton for login, cancel, and signup actions.<br>
+    JTextField for username and password inputs.<br>
+    Choice for selecting the user type (Admin or Customer).<br><h5>
+<br>
 <h4>Constructor:</h4>
 <h5>Sets up the JFrame window with a title, background color, and null layout for absolute positioning.<br>
 Adds labels, text fields, choice menu, and buttons to the window with specified positions and sizes.<br>
 Adds images to buttons and positions them appropriately.<br>
 Sets the window size, location, and visibility.<br></h5>
-
-
+<br>
 <h4>Action Event Handling:</4>
 <h5>Implements the ActionListener interface to handle button click events.<br>
 Login Button: Retrieves user inputs, constructs an SQL query, and verifies credentials from the database. If valid, opens a new Project window; otherwise, shows an error message.<br>
 Cancel Button: Closes the login window.<br> 
 Signup Button: Opens a new Signup window.<br> </h5>
-
+<br>
 <h4>Main Method:</h4>
 <h5>Creates an instance of the Login class to display the login window.</h5> <br>

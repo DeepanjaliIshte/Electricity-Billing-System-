@@ -221,7 +221,7 @@ Catches and prints any exceptions that occur during database operations.</h6>
 Components:
 <h4>Frame and Layout:</h4>
 <h6>Extends JFrame and sets layout to null for manual positioning of components.</h6>
-<h4>UI Elements<h6>:
+<h4>UI Elements : </h4>
 <h6>Heading: Displays the title "VIEW CUSTOMER INFORMATION".<br>
 Labels: For displaying customer information such as Name, Meter Number, Address, City, State, Email, and Phone.<br>
 Cancel Button: Closes the frame when clicked.</h6>
@@ -252,7 +252,50 @@ Button Handling: Sets up the "Cancel" button to close the frame.<br>
 Image Handling: Adds a scaled image to the frame.<br>
 This class provides a basic interface for viewing customer details and integrates with a database to fetch and display relevant information.</h6>
 
-<h2>--------UpdateCustomer Class--------</h2>
+<h2>--------UpdateInformation Class--------</h2>
+<h6>The UpdateInformation class provides a GUI for updating customer information based on a given meter number.</h6>
+
+Components:
+
+<h4>Frame and Layout:</h4>
+<h6>Extends JFrame and uses a null layout for manual positioning of components.</h6>
+
+<h4>UI Elements:</h4>
+<h6>Heading: Displays the title "UPDATE CUSTOMER INFORMATION".
+Labels and TextFields: Displays and allows editing of customer details such as Address, City, State, Email, and Phone. The customer’s Name and Meter Number are displayed as labels but are not editable.
+Buttons:
+ 1. Update: Saves the changes to the database when clicked.<br>
+ 2. Cancel: Closes the frame when clicked.<br>
+Image: Displays an image related to the update functionality.<h6>
+
+<h4>Database Interaction:</h4>
+<h6>Fetching Information: Retrieves customer details from the database based on the meter number and populates the text fields and labels.<br>
+Updating Information: Updates the customer information in the database when the "Update" button is clicked.</h6>
+
+<h4>Key Points:</h4>
+<h6>Database Security:<br>
+The current code uses string concatenation for SQL queries, which is vulnerable to SQL injection. Use PreparedStatement for secure database interactions.<br>
+Resource Management:<br>
+Ensure that database connections and statements are properly closed.<br>
+UI Design:<br>
+Manually positions UI components. Ensure consistent alignment and sizing for a clean layout.<br>
+Image Handling:Adds and scales an image to fit the frame.</h6>
+
+<h4>Code Flow</h4>
+<h6>Initialization:<br>
+Sets frame size, layout, and background color.<br>
+Adds labels and text fields for displaying and editing customer information.<br>
+Adds buttons for updating or canceling the operation.<br>
+Loads customer information from the database into the text fields and labels.</h6>
+
+<h4>Event Handling:</h4>
+<h6>Update Button:
+Retrieves the data from text fields and updates the customer information in the database.<br>
+Displays a confirmation message upon successful update.<br>
+Cancel Button: Closes the frame.</h6>
+
+<h4>Main Method:</h4>
+Creates an instance of UpdateInformation with an empty meter number for testing.
 <h2>--------PayBill Class--------</h2>
 <h2>--------Paytm Class--------</h2>
 <h2>--------GenerateBIll Class--------</h2>

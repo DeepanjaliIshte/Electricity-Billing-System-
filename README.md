@@ -1,6 +1,6 @@
 # Electricity-Billing-System-
 
-<h2>Splash Class</h2>
+<h2>--------Splash Class--------</h2>
 <h6>
 The Splash class displays an animated splash screen that grows in size over a short period.<br>
 It uses Java Swing components (JFrame, JLabel, ImageIcon) to create and display the window.<br>
@@ -9,7 +9,7 @@ The animation and timing are handled using a loop and a separate thread.<br>
 </h6>
 <br>
 
-<h2>Login Class</h2>
+<h2>--------Login Class--------</h2>
 <h6>
   The Login class creates a graphical user interface (GUI) for logging into an application. It allows users to input their username, password, and select their role (Admin or Customer). The class handles login authentication, and provides options to cancel or sign up.<br></h6>
 
@@ -34,7 +34,7 @@ Signup Button: Opens a new Signup window. </h6>
 <h4>Main Method:</h4>
 <h6>Creates an instance of the Login class to display the login window.</h6> <br>
 
-<h2>Signup class </h2>
+<h2>--------Signup class-------- </h2>
 <h6>The Signup class is a Java Swing-based GUI application that allows users to create a new account. It provides options for users to sign up either as an Admin or as a Customer. The class extends JFrame and implements ActionListener to handle button click events.</h6>
 
 Key Components
@@ -65,22 +65,3 @@ Navigates back to the login screen.</h6>
 <h4>Main Method</h4>
 <h6>Creates an instance of the Signup class to display the signup form.</h6>
 
-/*Detailed Explanation 
-<h4>Constructor</h4>
-
-Sets up the main frame with size, background color, and layout. <br>
-Creates and configures a panel to hold the form elements.<br>
-Adds labels and text fields for user inputs, positioning them within the panel.<br>
-Adds a focus listener to the meter number field to fetch and display the name associated with the meter number.<br>
-Adds an item listener to the account type choice to show/hide the meter number field based on the selected account type.<br>
-Adds buttons for creating an account and navigating back, with action listeners attached.<br>
-Adds an image for visual appeal and sets the frame's visibility.<br>
-
-<h4>Event Handling</h4>
-The actionPerformed method handles actions based on the source of the event (create or back button).<br>
-For the create button, it constructs and executes an SQL query to either insert a new record (for Admin) or update an existing record (for Customer) in the login table.<br>
-Displays a message indicating successful account creation and navigates back to the login screen.<br>
-For the back button, it simply navigates back to the login screen.<br>
-
-<h4>Main Method</h4>
-The main method initializes the signup form by creating an instance of the Signup class.</h6> */

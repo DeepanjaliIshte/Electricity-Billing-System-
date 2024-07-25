@@ -133,3 +133,93 @@ Makes the JFrame visible.</h6>
 
 <h4>Main Method</h4>
 <h6>Creates an instance of CustomerDetails, triggering the GUI to display.</h6>
+
+<h2>--------CalucalteBill Class--------</h2>
+The CalculateBill class is a GUI application for calculating and managing electricity bills. It extends JFrame and implements the ActionListener interface to handle user interactions.
+
+Key Components
+<h4>Instance Variables</h4>
+
+<h6>JTextField tfname, tfaddress, tfstate, tfunits, tfemail, tfphone: (unused in the current implementation but intended for additional customer details).<br>
+JButton next, cancel: Buttons for submitting and canceling.<br>
+JLabel lblname, labeladdress: Labels to display customer name and address.<br>
+Choice meternumber, cmonth: Dropdowns for meter number and month selection.<br>
+JTable table: (not used in the current implementation).</h6>
+
+<h4>Constructor (CalculateBill)</h4>
+<h6>Sets up the JFrame properties: size, location, and background color.<br>
+Initializes a JPanel with a null layout for custom component positioning.<br>
+Adds various JLabel and JTextField components for user inputs and displays.<br>
+Populates the Choice component for meter numbers with data from the customer table.<br>
+Adds an ItemListener to update customer details when the meter number changes.<br>
+Adds a Choice component for selecting the month.<br>
+Adds "Submit" and "Cancel" buttons with associated action listeners.<br>
+Adds an image to the west of the frame.<br>
+Configures layout and visibility of the frame.</h6>
+  
+<h4>Action Listener (actionPerformed)</h4>
+<h5>Submit Button (next):</h5>
+<h6>Retrieves selected meter number, units consumed, and month.<br>
+Calculates the total bill based on unit cost and other charges from the tax table.<br>
+Inserts the calculated bill into the bill table with the status "Not Paid".<br>
+Displays a confirmation message and hides the current window.</h6>
+<h4>Cancel Button:</h4>
+<h6>Closes the current window.</h6>
+<h4>Main Method</h4>
+<h6>Creates an instance of CalculateBill, triggering the GUI to display.</h6>
+
+<h2>--------BillDetails Class--------</h2>
+The BillDetails class extends JFrame and is used to display bill details in a table format. Here's a summary of the key components and functionality:
+
+<h4>Constructor (BillDetails(String meter)):</h4>
+<h5>Size and Location:</h5><h6> Sets the window size to 700x650 pixels and positions it at (400, 150) on the screen.</h6>
+<h5>Background:</h5><h6> Sets the background color of the content pane to white.</h6>
+<h5>Table Initialization:</h5><h6> Creates a JTable to display data.</h6>
+Database Query:<h6> Establishes a connection to the database using the Conn class (presumed to be defined elsewhere). It queries the bill table for records where the meter_no matches the provided meter value.</h6>
+<h5>ResultSet to Table Model:</h5><h6> Uses DbUtils.resultSetToTableModel(rs) to convert the ResultSet into a table model for the JTable.</h6>
+<h5>Scroll Pane:<h5> <h6>Wraps the JTable in a JScrollPane to handle large data sets and adds it to the frame.</h6>
+<h5>Visibility:</h5> <h6> Sets the frame to be visible.</h6>
+
+<h4>Main Method (main(String[] args)):</h4>
+<h6>Creates an instance of BillDetails with an empty string for the meter number, which likely won't display any data unless a valid meter number is provided.</h6>
+  
+<h6>Note: This code relies on an external Conn class for database connection and DbUtils for converting ResultSet to a table model. </h6>
+
+<h2>--------MeterInfo Class--------</h2>
+<h6>The MeterInfo class is a Swing-based GUI for inputting and submitting meter information. </h6>
+
+Key Components
+Class Declaration and Constructor:
+
+MeterInfo(String meternumber): The constructor initializes the frame and sets up the GUI components.
+Frame Properties: Sets the size (700x500 pixels) and location (400, 200) of the window.
+Panel (JPanel p): Uses a JPanel with a null layout manager to position components manually and sets its background color.
+GUI Components:
+
+Labels (JLabel): Display static text and meter information.
+Text Fields (JTextField): Used for entering various meter details. (Though JTextField instances are defined, they are not used in the current code.)
+Choice (Choice): Dropdown menus for selecting meter location, type, phase code, and bill type.
+Buttons (JButton): A "Submit" button that triggers the action event.
+Layout and Appearance:
+
+Heading: A JLabel displaying "Meter Information" at the top of the panel.
+Image: An ImageIcon added to the left side of the frame for visual enhancement.
+Background: Sets the background color of the content pane to white.
+Action Handling:
+
+actionPerformed(ActionEvent ae): 
+Handles the "Submit" button click:
+Retrieves values from the Choice components and constructs an SQL query to insert the data into the meter_info table.
+Uses a Conn class to execute the SQL update query.
+Displays a success message and hides the window upon successful submission.
+Catches and prints any exceptions that occur during database operations.
+
+Main Method:
+
+<h6>main(String[] args): Creates an instance of MeterInfo with an empty string for the meter number, which will not display actual data unless a valid meter number is provided.</h6>
+
+<h2>--------ViewCustomer Class--------</h2>
+<h2>--------UpdateCustomer Class--------</h2>
+<h2>--------PayBill Class--------</h2>
+<h2>--------Paytm Class--------</h2>
+<h2>--------GenerateBIll Class--------</h2>

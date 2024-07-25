@@ -296,6 +296,89 @@ Cancel Button: Closes the frame.</h6>
 
 <h4>Main Method:</h4>
 Creates an instance of UpdateInformation with an empty meter number for testing.
+
 <h2>--------PayBill Class--------</h2>
+<h6>The PayBill class provides a user interface to view and pay electricity bills. It retrieves data from a database, displays it in the GUI, and updates the bill status upon payment. The interface includes labels for displaying information, a dropdown for selecting the month, and buttons for actions (pay and back). The application also updates displayed information dynamically based on user interactions with the month dropdown.</h6>
+
+<h4>Components:</h4>
+<h6>JFrame: The main window for the application.<br>
+JLabels: Used to display text, such as "Electricity Bill," "Meter Number," "Name," "Month," "Units," "Total Bill," and "Status."<br>
+Choice (Dropdown): Allows users to select a month.<br>
+JButtons: Two buttons labeled "Pay" and "Back."<br>
+ImageIcon: An icon displayed within the application.</h6>
+
+<h4>Functionalities:</h4>
+<h6>Constructor PayBill(String meter):<br>
+Sets the layout, size, and other properties of the JFrame.<br>
+Initializes and adds various components (labels, dropdown, buttons, image) to the JFrame.<br>
+Connects to a database to fetch customer and bill information based on the provided meter number.<br>
+Updates the GUI with fetched data (customer name, units consumed, total bill, and payment status).<br>
+Adds an ItemListener to the month dropdown to update the bill information when the selected month changes.</h6>
+
+<h4>Database Connection:</h4>
+<h6>The Conn class (not provided in the code) is used to connect to the database and execute SQL queries.<br>
+Initially fetches customer information and bill details for January.<br>
+Updates the displayed bill details when a different month is selected.</h6>
+
+<h4>ActionListener Implementation:</h4>
+<h6>Handles button click events.
+When the "Pay" button is clicked, it updates the bill status to 'Paid' in the database for the selected month and meter number.
+When the "Back" button is clicked, it closes the current window.</h6>
+<h4>Main Method:</h4>
+<h6>Creates a new instance of PayBill with an empty meter number, starting the application.</h6>
+
 <h2>--------Paytm Class--------</h2>
+<h6>The Paytm class provides a user interface to display the Paytm online payments page within a Java Swing application. It uses a JEditorPane to load and display the web page, and a JScrollPane to make the content scrollable. A "Back" button is provided for navigation, which, when clicked, opens the previous PayBill window. This class integrates Paytm's payment portal into the electricity bill payment system, allowing users to pay their bills online.</h6>
+
+<h4>Components:</h4>
+<h6>JFrame: The main window for the application.<br>
+JEditorPane: A component that allows displaying HTML content, including web pages.<br>
+JScrollPane: A scrollable pane that contains the JEditorPane.<br>
+JButton: A button labeled "Back" for navigating back to the previous screen.</h6>
+
+<h4>Functionalities:</h4>
+<h6>Constructor Paytm(String meter):<br>
+Sets the meter variable to the provided meter number.<br>
+Initializes a JEditorPane to display the Paytm online payments page.<br>
+Sets the JEditorPane to be non-editable.<br>
+Attempts to load the Paytm online payments page. If the page fails to load, it displays an error message.<br>
+Adds the JEditorPane to a JScrollPane to enable scrolling.<br>
+Adds a "Back" button to the JEditorPane for navigation.<br>
+Sets the size, location, and visibility properties of the JFrame.</h6>
+
+<h4>ActionListener Implementation:</h4>
+<h6>Handles button click events.<br>
+When the "Back" button is clicked, it closes the current window and opens the PayBill window with the provided meter number.</h6>
+
+<h4>Main Method:</h4>
+<h6>Creates a new instance of Paytm with an empty meter number, starting the application.</h6>
+
 <h2>--------GenerateBIll Class--------</h2>
+<h6>The GenerateBill class provides a user interface to generate and display an electricity bill. Users can select a month from a dropdown and click the "Generate Bill" button to retrieve and display detailed bill information from the database. The information includes customer details, meter information, tax details, and the current month's bill charges. The text area is scrollable, allowing users to view all the details easily. This class integrates database connectivity to fetch the required information dynamically based on user input.</h6>
+
+<h4>Components:</h4>
+<h6>JFrame: The main window for the application.<br>
+JPanel: A container for organizing the layout of the components.<br>
+JLabel: Used to display text, such as "Generate Bill" and the meter number.<br>
+Choice (Dropdown): Allows users to select a month.<br>
+JTextArea: A text area for displaying the generated bill details.<br>
+JScrollPane: A scrollable pane that contains the JTextArea.<br>
+JButton: A button labeled "Generate Bill" to trigger the bill generation process.<h6>
+
+<h4>Functionalities:</h4>
+<h6>Constructor GenerateBill(String meter):<br>
+Sets the size, location, and layout of the JFrame.<br>
+Initializes and adds various components (labels, dropdown, text area, button) to the JFrame.<br>
+Sets the initial text of the JTextArea with instructions.<br>
+Adds an ActionListener to the "Generate Bill" button.</h6>
+
+<h4>ActionListener Implementation:</h4>
+<h6>Handles button click events.<br>
+When the "Generate Bill" button is clicked, it retrieves data from the database and updates the JTextArea with detailed bill information for the selected month and meter number.</h6>
+
+<h4>Database Connection:</h4>
+<h6>The Conn class (not provided in the code) is used to connect to the database and execute SQL queries.<br>
+Retrieves and displays customer details, meter information, tax information, and the current month's bill details.</h6>
+
+<h4>Main Method:</h4>
+<h6>Creates a new instance of GenerateBill with an empty meter number, starting the application.</h6>
